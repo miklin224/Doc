@@ -1,0 +1,55 @@
+CIS 470 Deployment Plan
+Team:	c
+Team Members:	Deivi Rivera                      Muhannad Diab
+Matthew Hamater             Jeffrey Kanz
+Michael VanDenBoom     Johnny Vinh
+Date:	25 November 2013
+Project Title	Williams Specialty Company--Business Automation
+Instructions	Provide a 2-3 paragraph description of your Team's plans in each of the areas.  
+
+1.	Required Hardware
+
+Server: Virtual Server
+CPU: minimum 2 CPU quad core
+Memory: minimum 12 GB Ram
+Storage: 4 X 1TB (RAID 5 Array)
+Network: 100/10 Mbps
+
+2.	Required Operating System environment
+
+A.	Server Side
+a.	Windows Server 2010
+b.	IIS
+c.	.NET Framework 4
+d.	ODBC Access database 2010
+B.	Client Side
+a.	Microsoft Windows 2000/XP w/ MS Access
+b.	MS Outlook 2000/XP
+c.	MS Office 2000/XP
+
+
+
+3.	Software Installation/Deployment
+Software installation includes: Configure network server environment with ASP.NET 4.0 and Access 2010 database compatible. Install all ASP.NET, C#, MDB files.
+
+Deployment includes: configuring IIS, test connection and website function.
+
+
+4.	Migration Plan
+In the event that the system becomes rapidly outdated or under-functional compared to other software, and/or systems migration is deemed a necessary transitory path, there are a few details which must be discussed before migration of our developed system can be carried out.  First of which is the definition of “migration” which we are using.  The system may be migrated to a new host/server, or the system’s data can be migrated to a new software system. 
+In the case of software migration to a new host, there are only a few steps to be taken. 
+1.	First of all, all data must be frozen. This means we need to take the software offline while the site’s data is moved to the new host.
+2.	 There should be very little config changes needed unless it is a .Net framework upgrade or an OS swap. If this happens, a Service Pack may need to be developed to mitigate the problem.  
+3.	There may be a need to train new managers or system admin in running maintenance on the new system and database.
+
+In the case of migrating system data to a new software system:
+ 
+1.	Any and all system/db functions must be “frozen” and taken offline during the conversion of data required to migrate internal system database data to a new system.  
+2.	To move the data, a third application may be needed to convert the data from our system’s native database to that of another system. Otherwise, a complex set of data queries or “views” may be set up to manipulate the original database to be used in a new system; however this option will cause some increased overhead from a custom-developed system to handle the data.  Without a conversion application the migration process will definitely cost much more resources to carry out and potentially create long delays in service as secondary systems are run in parallel to facilitate the migration of data from old system to new.
+
+5.	Post Implementation Activities
+After the site is deployed, management will need to run maintenance on the database to ensure smooth continuous functionality. 
+Monthly reviews of the systems abilities and limitations, may be carried out in order to define errors, or features, and then fix or add them in the system.  
+ Reviewing and testing the code on a monthly basis to ensure there are no vulnerabilities created by updating the underlying system architecture, like using new Operating Systems, Server Setups/Configurations, .NET, as well as other newer library versions is a must.  
+Testing and analysis should be carried out any time an error is found/patched and any time a feature is added to the system. These need to be integrated into the systems change log and release/patch notes.
+ Continue to follow up on any service tickets the end user may have and provide documentation and training for newer versions of the system.
